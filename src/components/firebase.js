@@ -8,7 +8,7 @@ import 'firebase/compat/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDcwlOmF9HIk3_24aKNHkJjT6FPQiwy2Mo",
+    apiKey: import.meta.env.VITE_FIREBASE_KEY,
     authDomain: "hacker-s-portal.firebaseapp.com",
     projectId: "hacker-s-portal",
     storageBucket: "hacker-s-portal.appspot.com",
