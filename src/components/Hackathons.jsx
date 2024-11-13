@@ -8,7 +8,7 @@ const Hackathons = () => {
   const [isEmpty,setIsEmpty] = useState(true)
   
   const getHack = async() =>{
-    let req = await fetch("http://localhost:3000/")
+    let req = await fetch("https://eventsphere-backend.vercel.app/")
     let data =await req.json()
     if(data){
       setHack(data)

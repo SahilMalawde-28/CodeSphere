@@ -19,7 +19,7 @@ const Myhack = (props) => {
     setForm({...form, [name]:value})
   }
   const valid = async() =>{
-    let req = await fetch(`http://localhost:3000/chkusr:${props.id}:${form.name}`)
+    let req = await fetch(`https://eventsphere-backend.vercel.app/chkusr:${props.id}:${form.name}`)
     let data = await req.json();
     return data.value;
     
@@ -36,7 +36,7 @@ const Myhack = (props) => {
     if(val == 0){
        setLoading(!loading)
     
-    let a = await fetch(`http://localhost:3000/add`,{
+    let a = await fetch(`https://eventsphere-backend.vercel.app/add`,{
         headers : {"Content-type":"application/json"},
         method : "POST",
         body:JSON.stringify(form)
@@ -59,7 +59,7 @@ const Myhack = (props) => {
     
        setLoading(!loading)
     
-    let a = await fetch(`http://localhost:3000/sub`,{
+    let a = await fetch(`https://eventsphere-backend.vercel.app/sub`,{
         headers : {"Content-type":"application/json"},
         method : "POST",
         body:JSON.stringify(form)

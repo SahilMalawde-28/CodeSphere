@@ -26,7 +26,7 @@ const Form = (props) => {
     setForm({...form, [name]:value})
   }
   const valid = async() =>{
-    let req = await fetch(`http://localhost:3000/chkusr:${id}:${form.leader}`)
+    let req = await fetch(`https://eventsphere-backend.vercel.app/chkusr:${id}:${form.leader}`)
     let data = await req.json();
     console.log(data.value);
     return data.value;
@@ -44,7 +44,7 @@ const Form = (props) => {
     if(val == 0){
       setLoading(!loading)
     
-    let a = await fetch(`http://localhost:3000/form:${id}`,{
+    let a = await fetch(`https://eventsphere-backend.vercel.app/form:${id}`,{
         headers : {"Content-type":"application/json"},
         method : "POST",
         body:JSON.stringify(form)

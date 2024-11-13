@@ -10,7 +10,7 @@ const Viewprof = () => {
 
     const getData = async () => {
         try {
-            let req = await fetch(`http://localhost:3000/teaminfo:${user}`); // Correct URL format
+            let req = await fetch(`https://eventsphere-backend.vercel.app/teaminfo:${user}`); // Correct URL format
             let d = await req.json();
             if (d) {
                 setData(d);
@@ -22,7 +22,7 @@ const Viewprof = () => {
 
     const getPoints = async () => {
         try {
-            let req = await fetch(`http://localhost:3000/userpoints:${user}`); // Correct URL format
+            let req = await fetch(`https://eventsphere-backend.vercel.app/:${user}`); // Correct URL format
             let d = await req.json();
             if (d) {
                 setPoints(d);

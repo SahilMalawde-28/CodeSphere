@@ -9,7 +9,7 @@ const Code = () => {
   const [data,setData] = useState([]);
   
   const getData = async() =>{
-    let req = await fetch(`http://localhost:3000/teaminfo:${userId}`)
+    let req = await fetch(`https://eventsphere-backend.vercel.app/teaminfo:${userId}`)
     let d =await req.json()
     if(d){
       setData(d);

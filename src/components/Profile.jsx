@@ -23,7 +23,7 @@ const Profile = () => {
     
   }
   const getData = async() =>{
-    let req = await fetch(`http://localhost:3000/teaminfo:${userId}`)
+    let req = await fetch(`https://eventsphere-backend.vercel.app/teaminfo:${userId}`)
     let d =await req.json()
     if(d){
       setData(d);
@@ -32,7 +32,7 @@ const Profile = () => {
   }
 
   const getPoints = async() =>{
-    let req = await fetch(`http://localhost:3000/userpoints:${userId}`)
+    let req = await fetch(`https://eventsphere-backend.vercel.app/userpoints:${userId}`)
     let d =await req.json()
     if(d){
       setPoints(d);

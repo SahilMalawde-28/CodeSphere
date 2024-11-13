@@ -34,7 +34,7 @@ const Login = () => {
             localStorage.setItem("name", displayName);
             localStorage.setItem("email", email);
 
-            const response = await fetch("http://localhost:3000/user");
+            const response = await fetch("https://eventsphere-backend.vercel.app/user");
             const data = await response.json();
             const existingUsers = data.map(item => item.id);
 
@@ -45,7 +45,7 @@ const Login = () => {
             }
 
             if (dup) {
-                await fetch("http://localhost:3000/user", {
+                await fetch("https://eventsphere-backend.vercel.app/user", {
                     headers: { "Content-Type": "application/json" },
                     method: "POST",
                     body: JSON.stringify({ "name": displayName })
